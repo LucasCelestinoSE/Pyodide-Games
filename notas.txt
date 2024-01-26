@@ -1,0 +1,14 @@
+Aparentemente o primeiro arquivo pode estar junto numa pasta public ou parecido.
+Exemplo> 
+--display.py (Arquivo não zipado!)  (dependência hello.zip => hello2.zip)
+
+Tudo que foi feito no dia 25/01/2023
+O que fiz nesse dia ? 
+> Foi criado um jogo da velha bem simples usando a biblioteca da openSpiel.
+Nesse jogo, diminuí bastante as depedências e suas funcionalidades como as analises estatísticas, algortimo de Monte Carlo entre outras questões, no intuito de continuar e me encontrar mais nos problemas reais e CORE do projeto, que se trata em fazer o jogo funcionar no navegador...
+
+Principais coisas a resolver diante esse problema>
+***Descobrir de alguma forma, usando somente pyodide, por enquanto, interface segura e sem muitos bugs entre o webservice dos códigos pyodide e o front-end do cliente.***
+Erro que dá quando eu faço isso>
+TypeError: can't assign to property "globals" on "import pyspiel\nfrom js import document\ngame = pyspiel.load_game(\"tic_tac_toe\")\nstate = game.new_initial_state()\n\nwhile not state.is_terminal():\n  print(\"Current player: \", state.current_player())\n  print(\"Legal actions: \", state.legal_actions())\n  action = int(input(\"Enter action: \"))\n  state.apply_action(action)\n  print(state)\n  print(\"Returns: \", state.returns())\n": not an object
+
